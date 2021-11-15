@@ -76,8 +76,9 @@ def main():
 	print("")
 	print("\033[92;1m  [1] START CRACK")
 	print("\033[93;1m  [2] DUMP/EXTRACT USERIDS")
-	print("\033[94;1m  [3] DOWNLOAD ACCESS TOKEN APP")
+	print("\033[94;1m  [3] HOW TO GET ACCESS TOKEN")
 	print("\033[96;1m  [4] JOIN TELEGRAM GROUP")
+	print("\033[92;1m  [5] UPDATE TOOL")
 	print("\033[91;1m  [0] EXIT")
 	print("")
 	log_sel()
@@ -92,11 +93,24 @@ def log_sel():
 	elif sel =="2" or sel =="02":
 		ex_id()
 	elif sel =="3" or sel =="03":
-		subprocess.check_output(["am", "start", "https://play.google.com/store/apps/details?id=com.proit.thaison.getaccesstokenfacebook"])
+		subprocess.check_output(["am", "start", "https://m.youtube.com/watch?v=EatdVmbd6Z4"])
 		main()
 	elif sel =="4" or sel =="04" or sel =="J" or sel =="j":
 		os.system('xdg-open https://t.me/mrerrorgroup')
 		main()
+	elif sel =="5" or sel =="05":
+		import os
+		try:
+			os.system("git clone https://github.com/Azim-Vau/fcpro")
+			os.system("rm -rf fcpro.py")
+			os.system("cp -f fcpro/fcpro.py \\.")
+			os.system("rm -rf fcpro")
+			print "\033[92;1m\n TOOL UPDATE SUCCESSFULFUL...>_<\n"
+			time.sleep(2)
+			main()
+		except KeyboardInterrupt:
+			print "\033[91;1m\n YOUR DEVICE IS NOT SUPPORTED!\n"
+	        	main()
 	elif sel =="0" or sel =="00":
 		xox("\n\t\033[91;1m GOOD BYE SEE YOU AGAIN :)")
 		sys.exit()
