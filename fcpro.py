@@ -5,14 +5,6 @@
 #OPEN SOURCE :)
 #DON'T FORGET TO GIVE CREDIT TO MR. ERROR
 
-P = "\033[97;1m" 
-M = "\033[91;1m" 
-H = "\033[92;1m" 
-K = "\033[93;1m" 
-B = "\033[94;1m" 
-U = "\033[95;1m" 
-O = "\033[93;1m" 
-N = "\033[0m"
 
 try:
 	import os,sys,time,platform,datetime,random,hashlib,re,threading,json,getpass,urllib,cookielib,requests,uuid,string,subprocess
