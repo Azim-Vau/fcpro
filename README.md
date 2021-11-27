@@ -1,5 +1,5 @@
 
-<img src="https://github.com/Azim-vau/Azim-vau/blob/main/IMAGE/62735854.jpeg" width="120" height="120" align="left">
+<img src="https://github.com/Azim-vau/Azim-vau/blob/main/IMAGE/azimvau.gif" width="120" height="120" align="left">
 <center>
   
   
