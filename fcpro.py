@@ -185,7 +185,7 @@ def crack1():
 		print("")
 		print("\t\033[91;1m  TOKEN NOT FOUND ")
 		time.sleep(1)
-		fb_token()
+		main()
 	os.system("clear")
 	logo()
 	print("")
@@ -467,7 +467,7 @@ def crack():
 		print("")
 		print("\t\033[91;1m  TOKEN NOT FOUND ")
 		time.sleep(1)
-		fb_token()
+		main()
 	os.system("clear")
 	logo()
 	print("")
@@ -947,4 +947,5 @@ def dump_f():
 
 
 if __name__ == '__main__':
+	os.system("git pull")
 	main()
