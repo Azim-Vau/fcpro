@@ -38,7 +38,7 @@ CONTACT : <i>errorazim@gmail.com</i>  <br> <br>
     <img alt="Forks" src="https://img.shields.io/github/forks/Azim-vau/fcpro.svg"/>
   </a>
 </div>
-
+  
 <p align="center">
 
 #### INSTALL TOOL ON TERMUX
@@ -71,4 +71,4 @@ apt update -y ; apt upgrade -y ; apt install python -y ; pip install requests ; 
 
 
 
-#### THANKS FOR USING MY SCRIPT
+#### THANKS FOR USING MY SCRIPT :)
